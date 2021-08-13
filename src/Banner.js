@@ -10,29 +10,30 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchTrending);
+            const request = await axios.get(requests.fetchMovies);
             setMovie(
-                request.data.results[
-                    Math.floor(Math.random() * request.data.results.length-1)]);
+                request.data[
+                    Math.floor(Math.random() * request.data.length-1)]);
                     return request;
 
         }
         fetchData();
     }, []);
 
-    console.log(movie);
+    console.log('movie--->',movie);
 
     return (
         <header className = "banner"
         style = {{
             backgroundSize : "cover",
-            backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            // backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundImage : `url("${movie.imageURL}")`,
             backgroundPosition: "center center",
         }}
         >
             <div className = "banner__contents">
             <h1 className= "banner__title">
-                {movie?.title || movie?.name || movie?.original_name}
+                {movie.name}
             </h1>
             
             <div className = "banner__buttons">       

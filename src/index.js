@@ -1,12 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './Home';
+import Movies from './Movies'
 import reportWebVitals from './reportWebVitals';
+import TvShows from './TvShows';
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <Router>
+          <Switch>
+            <Redirect exact path="/" to="/home"/>
+             <Route path="/home" component={Home}/>
+             <Route path="/movies" component={Movies}/>
+             <Route path="/Tvshows" component={TvShows}/>
+              
+          </Switch>
+        </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

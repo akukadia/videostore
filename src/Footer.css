@@ -5,12 +5,13 @@
   bottom: 0;
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: 27%;
 }
 
 .col {
   float: left;
-  width: 33.3%;
+  width: auto;
+  padding:20px;
 }
 
 .footer__rows {
@@ -23,4 +24,14 @@
   text-align: left;
   white-space: nowrap;
   text-overflow: nowrap;
+  list-style: none;
+}
+.col h4{
+  margin: 0px 0px 20px 40px;
+}
+.col ul{
+  list-style: none;
+}
+.col ul>li{
+  padding: 0px 0px 5px 0px;
 }
