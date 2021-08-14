@@ -13,9 +13,9 @@ ReactDOM.render(
     <Router>
           <Switch>
             <Redirect exact path="/" to="/home"/>
-             <Route path="/home" component={Home}/>
-             <Route path="/movies" component={Movies}/>
-             <Route path="/Tvshows" component={TvShows}/>
+             <Route path="https://video-store-backend1.herokuapp.com/api/home" component={Home}/>
+             <Route path="https://video-store-backend1.herokuapp.com/api/movies" component={Movies}/>
+             <Route path="https://video-store-backend1.herokuapp.com//api/Tvshows" component={TvShows}/>
               
           </Switch>
         </Router>
