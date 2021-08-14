@@ -3,7 +3,7 @@ import axios from "axios";
 /*base url to make requests to movie db */
 const instance = axios.create({
   // baseURL:"https://api.themoviedb.org/3", 
-    baseURL:"http://localhost:8080"
+    baseURL:"https://video-store-backend1.herokuapp.com"
 });
 
 export default instance;
